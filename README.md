@@ -1,11 +1,24 @@
-# Sample Snack app
+# Jogo da Velha (TicTacToe)
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by clicking the **Run** button or use the simulator by clicking **Tap to Play**. When you're done, click **Save** and share the link!
+Jogo da velha para dois jogadores no mesmo aparelho, feito em React Native (Expo) em 2022 como exercício, a partir do Expo Snack.
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Export** your project and use it with [expo-cli](https://docs.expo.io/versions/latest/introduction/installation.html).
+## Funcionalidades
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the **Embed** button.
+- Tabuleiro 3×3 com jogadas alternadas entre **O** e **X**
+- Cores diferentes para cada jogador
+- Detecção de vitória nas 8 sequências possíveis e de empate
+- Botão **Zerar** para recomeçar a partida
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.io).
+## Tecnologias
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack-web).
+- React Native 0.69 e Expo SDK 46
+- A lógica do jogo fica num objeto JavaScript separado da interface (`src/jogodavelha.js`)
+
+## Como executar
+
+```bash
+npm install
+npx expo start
+```
+
+Abra no celular pelo app **Expo Go** ou rode em um emulador.

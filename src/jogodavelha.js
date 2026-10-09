@@ -9,6 +9,7 @@ export default {
                 }
             },
     gameover: false,
+    draw: false,
     winning_sequences: [
                         [0,1,2],
                         [3,4,5],
@@ -27,6 +28,9 @@ export default {
             let winning_sequences_index = this.check_winning_sequences( this.simbols.options[this.simbols.turn_index] );
             if (winning_sequences_index >= 0){
                 this.game_is_over();
+            } else if (!this.board.includes('')){
+                this.draw = true;
+                this.game_is_over();
             } else{
                 this.simbols.change();
             }
@@ -39,7 +43,7 @@ export default {
 
     check_winning_sequences: function(simbol) {
 
-        for ( i in this.winning_sequences ) {
+        for ( let i in this.winning_sequences ) {
             if (this.board[ this.winning_sequences[i][0] ] == simbol  &&
                 this.board[ this.winning_sequences[i][1] ] == simbol &&
                 this.board[ this.winning_sequences[i][2] ] == simbol) {
@@ -57,6 +61,8 @@ export default {
 
     start: function() {
         this.board.fill('');
-        this.gameover = false;       
+        this.gameover = false;
+        this.draw = false;
+        this.simbols.turn_index = 0;
     },
 };

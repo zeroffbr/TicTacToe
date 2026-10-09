@@ -21,8 +21,19 @@ export default class App extends Component {
     })
   }
 
+  zerar(){
+    jogodavelha.start()
+    this.setState({
+      board: jogodavelha.board,
+      gameOver: jogodavelha.gameover
+    })
+  }
+
   isGameOver(){
     if(this.state.gameOver ){
+      if(jogodavelha.draw){
+        return  <Text style={{color:'#fff'}}>Empate!</Text>
+      }
       if(jogodavelha.simbols.turn_index == 0){
         return  <Text style={{color:'#1eff00'}}>'O' Venceu!</Text>
                   
@@ -52,7 +63,7 @@ export default class App extends Component {
         </View>
         <Text style={style.gameover}>{this.isGameOver()}</Text>
         <Button 
-          onPress= {() => {jogodavelha.start(null)}}
+          onPress= {() => {this.zerar()}}
           title='Zerar'
           color='#7d4011'
         >

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "exemplo09--jogodavelha",
-    "slug": "snack-9c23a577-691b-4108-a75b-ace86b6cbe35",
+    "name": "Jogo da Velha",
+    "slug": "tictactoe",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -29,6 +29,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "Funcionando Parcial - Botão zerar não funciona"
+    "description": "Jogo da velha para dois jogadores"
   }
 }
